@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-31T05:03:47.000Z</updated>
+  <updated>2016-08-31T23:28:55.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,92 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo+Github一步步搭建属于你的博客</title>
+    <link href="http://yoursite.com/2016/08/31/hexo-make-blog/"/>
+    <id>http://yoursite.com/2016/08/31/hexo-make-blog/</id>
+    <published>2016-08-31T13:26:39.000Z</published>
+    <updated>2016-08-31T23:28:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/671168-baa629b667228534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="hexo_blog_header.png"></p>
+<h1 id="第一步-搭建Hexo环境"><a href="#第一步-搭建Hexo环境" class="headerlink" title="第一步 搭建Hexo环境"></a>第一步 搭建Hexo环境</h1><p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo官方参考文档</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>这两项安装方式自行搜索，网上一堆的方法</p>
+<p>安装 Hexo：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
+<h2 id="建站："><a href="#建站：" class="headerlink" title="建站："></a>建站：</h2><p>创建一个文件夹：“blog”，用户存放Hexo的配置文件，<strong>然后进入blog敲击命令初始化</strong><br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-2055a151939bb7b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="hexo_init.png"></p>
+<p>基本完成，之前创建的blog目录就是你博客的根目录，所有hexo环境及配置文件都在里面，接下来就是博客生成三部曲：</p>
+<ol>
+<li>清除命令 <code>hexo clean</code></li>
+<li>生成静态页面命令 <code>hexo g</code></li>
+<li>启动服务 <code>hexo s</code></li>
+</ol>
+<p>浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 你将看到属于你的博客啦:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-41eb5df070914e57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="hexo_make_blog_success.png"></p>
+<p>当然，现在还仅仅是在本地运行着，接下来将其放入Github上!</p>
+<h1 id="第二步-创建Github新账号及项目"><a href="#第二步-创建Github新账号及项目" class="headerlink" title="第二步 创建Github新账号及项目"></a>第二步 创建Github新账号及项目</h1><p>首先自行创建好Github账号 <a href="https://github.com/join" target="_blank" rel="external">Github账号创建</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-4dbdd94c0355b66a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="201609_create_github_account.png"></p>
+<p>接下来两步直接点绿色按钮就好，然后自己去邮箱点验证链接！</p>
+<p>然后<a href="https://github.com/new" target="_blank" rel="external">新建项目</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-edd77d555d8e6855.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="201609_create_new_repository.png"></p>
+<p>命名规则一定是 <strong>你的用户名.github.io</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-399a01c8167c339d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="201609_click_setting.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-4ed039fb8f2a4ddd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github_setting_generator.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-1e50c699cba3823b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="continue_to_layout.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-ab422e5f9507ce3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github_page_pub.png"></p>
+<p>然后你在浏览器中输入 <a href="https://你的用户名.github.io/" target="_blank" rel="external">https://你的用户名.github.io/</a> 出现页面:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-d7272174e06b02e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github_page_success.png"></p>
+<p>到这一步，github创建基本工作完成！如果失败了，请自行检查以上步骤是否哪个环节出问题了！</p>
+<h1 id="第三步-将本地博客配置至Github"><a href="#第三步-将本地博客配置至Github" class="headerlink" title="第三步 将本地博客配置至Github"></a>第三步 将本地博客配置至Github</h1><p>在github上进入你上面创建的项目然后：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-ecf7856816638629.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="copy_git_url.png"></p>
+<p>在你之前创建的 blog 根目录中找到 _config.yml , 用文本编辑器打开此文件到最底部，并输入配置：<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/你的github用户名/你的github用户名.github.io.git" target="_blank" rel="external">https://github.com/你的github用户名/你的github用户名.github.io.git</a><br>  branch: master<br>例如我的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-20377910176d6ffa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="set_git_url.png"></p>
+<p>然后执行命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>博客生成三部曲：</p>
+<ol>
+<li>清除命令 <code>hexo clean</code></li>
+<li>生成静态页面命令 <code>hexo g</code></li>
+<li>启动服务 <code>hexo s</code> (此处可省略，仅仅是为了检查本地生成后的效果)</li>
+</ol>
+<p>然后将博客部署到你github账号上的命令：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>耐心等待完成后，你在浏览器中输入 <a href="https://你的用户名.github.io/" target="_blank" rel="external">https://你的用户名.github.io/</a> 出现页面则会与之前不同了:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/671168-0d5b55b9d7e17611.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="hexo_to_github_success.png"></p>
+<p>至此，其实你已经可以开始写博客，但是我相信你会想改变你博客的样式主题，请看下一步！</p>
+<h1 id="第四步-Hexo主题配置"><a href="#第四步-Hexo主题配置" class="headerlink" title="第四步 Hexo主题配置"></a>第四步 Hexo主题配置</h1><blockquote>
+<p><a href="https://hexo.io/themes/" target="_blank" rel="external">官方主题站选择链接</a></p>
+</blockquote>
+<p>我推荐一款主题，文档比较全面，如果你按照它里面的步骤一步步配置，将会了解整个主题配置流程，在用其他主题也是会容易上手些！<br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next 的Github</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Next官网</a></p>
+<p>这里我不用详细说明了，你按照Next官网的方式一步步配置便可以了，对主题配置你将会有更深入的了解！</p>
+<h1 id="第五步-写博客吧！"><a href="#第五步-写博客吧！" class="headerlink" title="第五步 写博客吧！"></a>第五步 写博客吧！</h1><p>到了这部分，你完全可以参考官方的套路来创建博文，也可自己按照自己的方式写</p>
+<h1 id="一些常用命令："><a href="#一些常用命令：" class="headerlink" title="一些常用命令："></a>一些常用命令：</h1><p><strong>hexo new”postName”</strong> 新建文章<br><strong>hexo new page”pageName”</strong> 新建页面<br><strong>hexo g</strong> 生成静态页面至public目录<br><strong>hexo s</strong> 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><strong>hexo deploy</strong> 将.deploy目录部署到GitHub<br><strong>hexo help</strong> 查看帮助<br><strong>hexo version</strong> 查看Hexo的版本</p>
+<h1 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a><a href="https://silencel.github.io/" target="_blank" rel="external">我的博客</a></h1><p><img src="http://upload-images.jianshu.io/upload_images/671168-5d6db42046b4c1c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="my_blog.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/671168-baa629b667228534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; a
+    
+    </summary>
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技能" scheme="http://yoursite.com/tags/%E6%8A%80%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Silence读《30年后，你拿什么养活自己》</title>
     <link href="http://yoursite.com/2016/08/31/read-after30years/"/>
     <id>http://yoursite.com/2016/08/31/read-after30years/</id>
     <published>2016-08-31T04:59:41.000Z</published>
-    <updated>2016-08-31T05:03:47.000Z</updated>
+    <updated>2016-08-31T22:47:23.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/671168-83afbabcfe4f8af0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="三十年后你拿什么养活自己.png"></p>
 <blockquote>
